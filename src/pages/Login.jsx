@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,7 +21,7 @@ const Login = () => {
       }
 
       alert('Login successful!');
-      navigate("/dashboard");
+      window.location.href = "/dashboard";
       // Redirect user or perform additional actions here
     } catch (error) {
       console.error('Error during login:', error);
