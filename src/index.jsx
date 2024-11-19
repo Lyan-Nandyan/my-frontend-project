@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Import file CSS dengan Tailwind
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Register, Login, Dashboard } from './pages';//jangan lupa tambah kalau ada page baru
-
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ImageGallery from './pages/Dashboard';
 // Definisikan routing
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <ImageGallery />,
   },
 ]);
 
